@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,400&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    padding: 50px inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+}
+
+
+
+/* <!-- ===================================================
+header start
+====================== --> */
+
+header {}
+
+nav {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {}
+
+nav .logo p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    font-feature-settings: 'liga'off;
+    color: #3A3A3A;
+    transition: .4s;
+}
+
+nav .logo:hover p {
+    color: #E02C6D;
+}
+
+nav .menuBar{}
+nav .menuBar ul{
+    display: flex;
+    align-items: center;
+}
+nav .menuBar ul li{
+    margin-left: 25px;
+}
+nav .menuBar ul li a{
+    transition: .4s;
+}
+nav .menuBar ul li:hover a{
+    color: #E02C6D;
+}
+nav input{
+    display: none;
+}
+nav label{
+    display: none;
+}
+nav label i{
+    font-size: 1.75em;
+}
+nav input:checked ~ label i{
+    color: #E02C6D;
+}
+nav span{
+    display: block;
+    transition: .4s;
+}
+nav span i{    
+    font-size: 1.75em;
+}
+nav span:hover i{
+    color: #E02C6D;
+} 
+
+#banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.bannerLeft {}
+
+.bannerLeft h1 {
+    font-size: 45px;
+    line-height: 125%;
+}
+
+.bannerLeft p {
+    margin: 25px 0;
+}
+
+.bannerLeft button {
+    background: #E02C6D;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.bannerLeft button>i {
+    margin-left: 25px;
+    transition: .4s;
+    background: #E02C6D;
+    color: #fff;
+    padding: .2em .25em;
+    border-radius: 50%;
+}
+
+#banner:hover .bannerLeft button>i {
+    transform: rotate(360deg);
+}
+
+.bannerLeft button:hover i {
+    background: #fff;
+    color: #E02C6D;
+}
+
+.bannerRight {
+    background: no-repeat center center url(./resources/images/Circle\ design.svg);
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.bannerRight::before {
+    content: "";
+    width: 88%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+    border: 30px solid rgba(247, 240, 255, 0.918);
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 6%;
+    z-index: -1;    
+    transform: scale(.5);
+    animation: scaleing 1s ease-out .5s infinite;
+    animation-play-state: paused;
+}
+@keyframes scaleing {
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+    
+}
+
+#banner:hover .bannerRight::before{
+    animation-play-state: running;
+}
+
+.bannerRight img {}
+
+/* <!-- ===========================================================
+header end
+====================== --> */
+
+/* <!-- ===========================================================
+main start
+====================== --> */
+
+
+/* <!-- ==================================gallery section start========================== --> */
+
+#collection {
+    padding: 50px;
+}
+
+.container>h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#collection .container>p {
+    text-align: right;
+    margin-top: 50px;
+}
+
+.container>p a {
+    color: #E02C6D;
+}
+
+.container>p a i {
+    margin-left: 25px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+}
+
+.gallery .blog {
+    padding: 25px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.gallery .blog:hover {
+    box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .blog img {}
+
+.gallery .blog h2 {
+    margin: .25em 0;
+    font-weight: 500;
+}
+
+.gallery .blog p {
+    color: #666;
+    margin: .5em 0;
+}
+
+.gallery .blog p strong {}
+
+.gallery .blog .ratings {}
+
+.gallery .blog .ratings i {
+    color: orange;
+}
+
+
+/* <!-- ==================================gallery section end========================== --> */
+/* <!-- ==================================optiohal feature start========================== --> */
+
+#feature {
+    padding: 50px;
+}
+
+#feature .container {}
+
+#feature>.container>h2 {
+    margin-bottom: inherit;
+}
+
+.container h5 {
+    font-weight: normal;
+    text-align: center;
+}
+
+#feature .container hr {
+    width: 7%;
+    margin: 5px auto;
+    margin-bottom: 35px;
+    border: 1px solid #E02C6D;
+}
+
+.divForm {
+    width: 50%;
+    margin: auto;
+    padding: 25px;
+    background: #E02C6D;
+}
+
+.divForm form {}
+
+.divForm form label {
+    color: #fff;
+    display: block;
+}
+
+.divForm form input,
+select {
+    margin: 8px 0 15px 0;
+    border: 0;
+    outline: 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.divForm form select {}
+
+.divForm form select option {}
+
+.divForm form button {
+    color: #E02C6D;
+    margin: auto;
+    margin-top: 23px;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+    display: block;
+}
+
+.divForm form button>i {
+    margin-left: 25px;
+    transition: .4s;
+    /* background: #E02C6D;
+    color: #fff; */
+    padding: .2em .25em;
+    border-radius: 50%;
+}
+
+.divForm form button:hover i {
+    background: #E02C6D;
+    color: #fff;
+    transform: rotate(360deg);
+}
+
+/* <!-- ==================================optiohal feature end========================== --> */
+
+/* <!-- ====================
+main end
+====================== --> */
+
+
+/* <!-- ==================================
+footer start
+========================== --> */
+#footer{
+    padding: 50px;
+    background: #000;
+    color: #fff;
+}
+#footer>.container>h2 {
+    margin-bottom: inherit;
+}
+.icons{
+    text-align: center;
+}
+.icons i{
+    margin: 12.5px;
+    transition: .4s;
+}
+
+.icons i:hover{
+    color: #E02C6D;
+}
+
+        
+/* <!-- ==================================
+footer end
+========================== --> */
+
+
+
+/* ==================================================================
+responsive part start
+============================ */
+
+@media (min-width: 1080px) {
+    nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #banner {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+/* ================tablet view======================= */
+
+@media (max-width: 781px) {
+   
+    nav {
+        position: relative;
+    }
+    nav .menuBar {
+        position: absolute;
+        background: #e02c6e75;
+        width: 100%;
+        top: 87px;
+        left: -100%;
+        opacity: 0;
+        transition: .4s;
+        z-index: 1;
+    }
+    nav .menuBar ul {
+        flex-direction: column;
+        padding: 25px 0;
+    }
+    nav .menuBar ul li {
+        margin: 10px 0;
+    }
+    nav .menuBar ul li a{
+        color: #fff;
+    }
+    nav label {
+        display: block;
+    }
+    
+nav input:checked ~ .menuBar{    
+    left: 0%;
+    opacity: 1;
+}
+#banner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+    padding: 50px 25px;
+}
+.bannerRight::before {
+    width: 60%;
+    left: 21%;
+}
+    .bannerLeft {
+        order: 2;
+        text-align: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery .blog:last-child {
+        display: none;
+    }
+
+    .divForm {
+        width: 75%;
+    }
+}
+
+/* ==================mobile view =====================*/
+
+@media (max-width: 425px) {
+    .logo {
+        text-align: center;
+    }
+
+    .bannerLeft h1 {
+        font-size: 35px;
+    }
+    .bannerRight::before {
+        width: 100%;
+        left: 0%;
+    }
+
+    #collection {
+        padding: 50px 25px;
+    }
+
+    .gallery {
+        display: block;
+    }
+
+    .gallery .blog {
+        margin-bottom: 25px;
+    }
+
+    .gallery .blog img {
+        width: 100%;
+    }
+
+    .divForm {
+        width: 100%;
+    }
+
+    .divForm form input,
+    select {
+        margin: 0px 0 4px 0;
+        padding: 5px;
+    }
+
+    .divForm form label {
+        font-size: 14px;
+    }
+
+    .divForm form button {
+        padding: 5px 25px;
+        font-size: 14px;
+    }
+
+    #feature .container hr {
+        width: 15%;
+    }
+
+}
+@media (max-width: 350px){
+    nav .logo p{
+        font-size: 18px;
+    }
+    
+nav span i{    
+    font-size: 1.25em;
+}
+
+nav label i{
+    font-size: 1.25em;
+}
+
+}
+
+/* ============================
+responsive part end
+===================================================================== */
