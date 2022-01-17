@@ -71,6 +71,7 @@ nav .menuBar ul li{
 }
 nav .menuBar ul li a{
     transition: .4s;
+    color: rgb(132,90,171);
 }
 nav .menuBar ul li:hover a{
     color: #E02C6D;
