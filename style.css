@@ -35,13 +35,19 @@ section {
 header start
 ====================== --> */
 
-header {}
+header {
+}
 
 nav {
     padding: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed !important;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.021);
+    z-index: 2;
 }
 
 nav .logo {}
@@ -105,6 +111,7 @@ nav span:hover i{
     grid-gap: 25px;
     align-items: center;
     padding: 0 25px;
+    padding-top: 137px;
 }
 
 .bannerLeft {}
@@ -428,6 +435,7 @@ nav input:checked ~ .menuBar{
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 40px;
     padding: 50px 25px;
+    padding-top: 137px;
 }
 .bannerRight::before {
     width: 60%;
